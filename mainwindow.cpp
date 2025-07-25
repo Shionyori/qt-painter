@@ -16,6 +16,14 @@ MainWindow::MainWindow(QWidget *parent)
     clearButton = new QPushButton("Clear Canvas", this);
     eraserButton = new QPushButton("Eraser: OFF", this);
 
+    colorButton->setMinimumSize(100, 30);
+    clearButton->setMinimumSize(100, 30);
+    eraserButton->setMinimumSize(100, 30);
+
+    colorButton->setStyleSheet("QPushButton { background-color: lightblue; color: black; }");
+    clearButton->setStyleSheet("QPushButton { background-color: lightgreen; color: black; }");
+    eraserButton->setStyleSheet("QPushButton { background-color: lightcoral; color: black; }");
+
     // 创建横向布局用于工具栏
     QHBoxLayout *toolbarLayout = new QHBoxLayout;
     toolbarLayout->addWidget(colorButton);
